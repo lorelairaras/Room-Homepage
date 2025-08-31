@@ -3,26 +3,230 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Room Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Outfit:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
-    <title>Frontend Mentor | Room homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link src="./src/style.css" alt="stylesheet" />
   </head>
-  <body>
-    Home Shop About Contact Discover innovative ways to decorate We provide unmatched quality, comfort, and style for property owners across the
-    country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your
-    property a reflection of you and what you love. Shop now We are available all across the globe With stores all over the world, it's easy for you
-    to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you
-    using our store locator. Any questions? Don't hesitate to contact us today. Shop now Manufactured with the best materials Our modern furniture
-    store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as
-    consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office. Shop now
-    About our furniture Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a
-    cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-    or anything in between. Product specialists are available to help you create your dream space.
+  <body class="font-league-spartan">
+    <header class="relative">
+      <!-- Hero Section with Slider -->
+      <section class="flex flex-col lg:flex-row">
+        <!-- Hero Images -->
+        <figure class="relative w-full lg:w-[58%]">
+          <!-- Desktop Images -->
+          <div class="hidden lg:block">
+            <img id="desktop-hero" src="desktop-image-hero-1.jpg" alt="Modern room decoration" class="w-full h-[65vh] object-cover" />
+          </div>
+
+          <!-- Mobile Images -->
+          <div class="lg:hidden">
+            <img id="mobile-hero" src="mobile-image-hero-1.jpg" alt="Modern room decoration" class="w-full h-[50vh] object-cover" />
+          </div>
+
+          <!-- Navigation -->
+          <nav class="absolute top-0 left-0 right-0 p-8 lg:p-12">
+            <div class="flex items-center justify-between">
+              <!-- Hamburger Menu (Mobile) -->
+              <button id="mobile-menu-button" class="lg:hidden" aria-label="Open navigation menu">
+                <img src="icon-hamburger.svg" alt="Menu" class="h-5 w-5" />
+              </button>
+
+              <!-- Logo -->
+              <div class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
+                <img src="logo.svg" alt="Room logo" class="h-5" />
+              </div>
+
+              <!-- Desktop Navigation -->
+              <div class="hidden lg:flex space-x-8 text-white">
+                <a
+                  href="#"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  >home</a
+                >
+                <a
+                  href="#"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  >shop</a
+                >
+                <a
+                  href="#"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  >about</a
+                >
+                <a
+                  href="#"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  >contact</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <!-- Slider Controls -->
+          <div class="absolute bottom-0 right-0 bg-black">
+            <div class="flex">
+              <button id="prev-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Previous slide">
+                <img src="icon-angle-left.svg" alt="Previous" class="h-5 w-5" />
+              </button>
+              <button id="next-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Next slide">
+                <img src="icon-angle-right.svg" alt="Next" class="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Hero Content -->
+        <article class="w-full lg:w-[42%] flex items-center justify-center py-16 lg:py-0">
+          <div class="w-full max-w-md px-8 lg:px-16">
+            <h2 id="slide-title" class="text-4xl lg:text-5xl font-bold mb-6">Discover innovative ways to decorate</h2>
+            <p id="slide-description" class="text-grey-500 mb-6 leading-relaxed">
+              We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in
+              bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what
+              you love.
+            </p>
+            <a href="#" class="flex items-center uppercase tracking-[0.5em] font-semibold text-grey-800 hover:text-grey-500 transition-colors">
+              Shop now
+              <img src="icon-arrow.svg" alt="Arrow" class="ml-4" />
+            </a>
+          </div>
+        </article>
+      </section>
+    </header>
+
+    <main>
+      <!-- About Section -->
+      <section class="flex flex-col lg:flex-row">
+        <figure class="lg:w-[30%]">
+          <img src="image-about-dark.jpg" alt="Dark furniture in a modern room" class="w-full h-full object-cover" />
+        </figure>
+
+        <article class="lg:w-[40%] flex items-center justify-center py-12 lg:py-0">
+          <div class="w-full max-w-md px-8">
+            <h2 class="uppercase text-lg font-bold mb-4 tracking-widest">About our furniture</h2>
+            <p class="text-grey-500 leading-relaxed">
+              Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme
+              that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or
+              anything in between. Product specialists are available to help you create your dream space.
+            </p>
+          </div>
+        </article>
+
+        <figure class="lg:w-[30%]">
+          <img src="image-about-light.jpg" alt="Light colored chair in a bright room" class="w-full h-full object-cover" />
+        </figure>
+      </section>
+    </main>
+
+    <!-- Mobile Navigation Menu -->
+    <aside id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+      <div class="bg-white w-4/5 h-full p-8 mobile-menu">
+        <div class="flex items-center justify-between mb-12">
+          <button id="close-menu" aria-label="Close navigation menu">
+            <img src="icon-close.svg" alt="Close menu" class="h-5 w-5" />
+          </button>
+          <img src="logo.svg" alt="Room logo" class="h-5" />
+          <div class="w-5"></div>
+          <!-- Spacer for flex alignment -->
+        </div>
+        <nav class="flex flex-col space-y-5 text-lg font-semibold">
+          <a href="#" class="hover:text-grey-500 transition-colors">home</a>
+          <a href="#" class="hover:text-grey-500 transition-colors">shop</a>
+          <a href="#" class="hover:text-grey-500 transition-colors">about</a>
+          <a href="#" class="hover:text-grey-500 transition-colors">contact</a>
+        </nav>
+      </div>
+    </aside>
+
+    <script>
+      // Slide data
+      const slides = [
+        {
+          desktopImage:
+            "https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80",
+          mobileImage:
+            "https://images.unsplash.com/photo-1493663284031-b7e3aaa4c4b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=375&q=80",
+          title: "Discover innovative ways to decorate",
+          description:
+            "We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.",
+        },
+        {
+          desktopImage:
+            "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80",
+          mobileImage:
+            "https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=375&q=80",
+          title: "We are available all across the globe",
+          description:
+            "With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we're in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.",
+        },
+        {
+          desktopImage:
+            "https://images.unsplash.com/photo-1505843490537-8de44d869c18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1440&q=80",
+          mobileImage:
+            "https://images.unsplash.com/photo-1505843490537-8de44d869c18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=375&q=80",
+          title: "Manufactured with the best materials",
+          description:
+            "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.",
+        },
+      ];
+
+      // DOM Elements
+      const desktopHero = document.getElementById("desktop-hero");
+      const mobileHero = document.getElementById("mobile-hero");
+      const slideTitle = document.getElementById("slide-title");
+      const slideDescription = document.getElementById("slide-description");
+      const prevButton = document.getElementById("prev-slide");
+      const nextButton = document.getElementById("next-slide");
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const closeMenuButton = document.getElementById("close-menu");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Current slide index
+      let currentSlide = 0;
+
+      // Function to update slide content
+      function updateSlide() {
+        const slide = slides[currentSlide];
+        if (desktopHero) desktopHero.src = slide.desktopImage;
+        if (mobileHero) mobileHero.src = slide.mobileImage;
+        slideTitle.textContent = slide.title;
+        slideDescription.textContent = slide.description;
+      }
+
+      // Event listeners for slide navigation
+      prevButton.addEventListener("click", () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+      });
+
+      nextButton.addEventListener("click", () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+      });
+
+      // Mobile menu functionality
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      });
+
+      closeMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      });
+
+      // Keyboard navigation for slides
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateSlide();
+        } else if (e.key === "ArrowRight") {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateSlide();
+        }
+      });
+    </script>
   </body>
 </html>

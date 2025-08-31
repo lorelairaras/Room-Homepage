@@ -9,6 +9,9 @@ export default {
         "grey-500": "hsl(0, 0%, 63%)",
         "grey-800": "hsl(0, 0%, 27%)",
       },
+      fontFamily: {
+        "league-spartan": ["League Spartan", "sans-serif"],
+      },
     },
   },
   plugins: [],
