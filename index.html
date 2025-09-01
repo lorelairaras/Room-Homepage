@@ -12,73 +12,52 @@
   </head>
   <body class="font-league-spartan">
     <header class="relative">
-      <!-- Hero Section with Slider -->
       <section class="flex flex-col lg:flex-row">
-        <!-- Hero Images -->
         <figure class="relative w-full lg:w-[58%]">
-          <!-- Desktop Images -->
           <div class="hidden lg:block">
             <img id="desktop-hero" src="desktop-image-hero-1.jpg" alt="Modern room decoration" class="w-full h-[65vh] object-cover" />
           </div>
 
-          <!-- Mobile Images -->
           <div class="lg:hidden">
             <img id="mobile-hero" src="mobile-image-hero-1.jpg" alt="Modern room decoration" class="w-full h-[50vh] object-cover" />
           </div>
 
-          <!-- Navigation -->
           <nav class="absolute top-0 left-0 right-0 p-8 lg:p-12">
-            <div class="flex items-center justify-between">
-              <!-- Hamburger Menu (Mobile) -->
-              <button id="mobile-menu-button" class="lg:hidden" aria-label="Open navigation menu">
+            <div class="flex items-center">
+              <button id="mobile-menu-button" class="lg:hidden mr-6" aria-label="Open navigation menu">
                 <img src="icon-hamburger.svg" alt="Menu" class="h-5 w-5" />
               </button>
 
-              <!-- Logo -->
-              <div class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
+              <div class="mr-12">
                 <img src="logo.svg" alt="Room logo" class="h-5" />
               </div>
 
-              <!-- Desktop Navigation -->
-              <div class="hidden lg:flex space-x-8 text-white">
+              <div class="hidden lg:flex space-x-10 text-white">
                 <a
                   href="#"
-                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
                   >home</a
                 >
                 <a
                   href="#"
-                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
                   >shop</a
                 >
                 <a
                   href="#"
-                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
                   >about</a
                 >
                 <a
                   href="#"
-                  class="relative pb-1 after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-white after:transition-all hover:after:w-full"
+                  class="relative pb-1 after:absolute after:bottom-0 after:left-1/2 after:w-0 after:h-0.5 after:bg-white after:transition-all after:duration-300 hover:after:w-full hover:after:left-0"
                   >contact</a
                 >
               </div>
             </div>
           </nav>
-
-          <!-- Slider Controls -->
-          <div class="absolute bottom-0 right-0 bg-black">
-            <div class="flex">
-              <button id="prev-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Previous slide">
-                <img src="icon-angle-left.svg" alt="Previous" class="h-5 w-5" />
-              </button>
-              <button id="next-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Next slide">
-                <img src="icon-angle-right.svg" alt="Next" class="h-5 w-5" />
-              </button>
-            </div>
-          </div>
         </figure>
 
-        <!-- Hero Content -->
         <article class="w-full lg:w-[42%] flex items-center justify-center py-16 lg:py-0">
           <div class="w-full max-w-md px-8 lg:px-16">
             <h2 id="slide-title" class="text-4xl lg:text-5xl font-bold mb-6">Discover innovative ways to decorate</h2>
@@ -92,12 +71,22 @@
               <img src="icon-arrow.svg" alt="Arrow" class="ml-4" />
             </a>
           </div>
+
+          <div class="absolute bottom-0 right-0 lg:right-[30%] lg:left-[58%] bg-black">
+            <div class="flex">
+              <button id="prev-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Previous slide">
+                <img src="icon-angle-left.svg" alt="Previous" class="h-5 w-5" />
+              </button>
+              <button id="next-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Next slide">
+                <img src="icon-angle-right.svg" alt="Next" class="h-5 w-5" />
+              </button>
+            </div>
+          </div>
         </article>
       </section>
     </header>
 
     <main>
-      <!-- About Section -->
       <section class="flex flex-col lg:flex-row">
         <figure class="lg:w-[30%]">
           <img src="image-about-dark.jpg" alt="Dark furniture in a modern room" class="w-full h-full object-cover" />
@@ -120,27 +109,24 @@
       </section>
     </main>
 
-    <!-- Mobile Navigation Menu -->
     <aside id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
-      <div class="bg-white w-4/5 h-full p-8 mobile-menu">
-        <div class="flex items-center justify-between mb-12">
+      <div class="bg-white w-full p-8">
+        <div class="flex items-center justify-between">
           <button id="close-menu" aria-label="Close navigation menu">
             <img src="icon-close.svg" alt="Close menu" class="h-5 w-5" />
+
+            <div class="w-5"></div>
           </button>
-          <img src="logo.svg" alt="Room logo" class="h-5" />
-          <div class="w-5"></div>
-          <!-- Spacer for flex alignment -->
+          <nav class="flex space-x-6 text-md font-bold">
+            <a href="#" class="hover:text-gray-500 transition-colors">home</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">shop</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">about</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">contact</a>
+          </nav>
         </div>
-        <nav class="flex flex-col space-y-5 text-lg font-semibold">
-          <a href="#" class="hover:text-grey-500 transition-colors">home</a>
-          <a href="#" class="hover:text-grey-500 transition-colors">shop</a>
-          <a href="#" class="hover:text-grey-500 transition-colors">about</a>
-          <a href="#" class="hover:text-grey-500 transition-colors">contact</a>
-        </nav>
       </div>
     </aside>
 
     <script src="./src/main.js"></script>
-    </script>
   </body>
 </html>
