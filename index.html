@@ -8,14 +8,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link src="./src/style.css" alt="stylesheet" />
+    <style>
+      .font-league-spartan {
+        font-family: "League Spartan", sans-serif;
+      }
+    </style>
   </head>
   <body class="font-league-spartan">
     <header class="relative">
       <section class="flex flex-col lg:flex-row">
-        <figure class="relative w-full lg:w-[58%]">
+        <figure class="relative w-full lg:w-[60%]">
           <div class="hidden lg:block">
-            <img id="desktop-hero" src="desktop-image-hero-1.jpg" alt="Modern room decoration" class="w-full h-[65vh] object-cover" />
+            <img id="desktop-hero" src="desktop-image-hero-1.jpg" alt="Modern room decoration" class="w-full h-[70vh] object-cover" />
           </div>
 
           <div class="lg:hidden">
@@ -58,26 +62,26 @@
           </nav>
         </figure>
 
-        <article class="w-full lg:w-[42%] flex items-center justify-center py-16 lg:py-0">
-          <div class="w-full max-w-md px-8 lg:px-16">
-            <h2 id="slide-title" class="text-4xl lg:text-5xl font-bold mb-6">Discover innovative ways to decorate</h2>
-            <p id="slide-description" class="text-grey-500 mb-6 leading-relaxed">
+        <article class="w-full lg:w-[40%] flex items-center justify-center py-12 lg:py-8 relative">
+          <div class="w-full max-w-md px-8 lg:px-12">
+            <h2 id="slide-title" class="text-3xl lg:text-4xl font-bold mb-4">Discover innovative ways to decorate</h2>
+            <p id="slide-description" class="text-gray-600 mb-6 leading-relaxed">
               We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in
               bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what
               you love.
             </p>
-            <a href="#" class="flex items-center uppercase tracking-[0.5em] font-semibold text-grey-800 hover:text-grey-500 transition-colors">
+            <a href="#" class="flex items-center uppercase tracking-[0.5em] font-semibold text-gray-800 hover:text-gray-500 transition-colors">
               Shop now
               <img src="icon-arrow.svg" alt="Arrow" class="ml-4" />
             </a>
           </div>
 
-          <div class="absolute bottom-0 right-0 lg:right-[30%] lg:left-[58%] bg-black">
-            <div class="flex">
-              <button id="prev-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Previous slide">
+          <div class="absolute -left-0 bottom-0 bg-black h-20">
+            <div class="flex h-full">
+              <button id="prev-slide" class="px-7 hover:bg-gray-600 transition-colors h-full flex items-center" aria-label="Previous slide">
                 <img src="icon-angle-left.svg" alt="Previous" class="h-5 w-5" />
               </button>
-              <button id="next-slide" class="p-6 hover:bg-grey-800 transition-colors" aria-label="Next slide">
+              <button id="next-slide" class="px-7 hover:bg-gray-600 transition-colors h-full flex items-center" aria-label="Next slide">
                 <img src="icon-angle-right.svg" alt="Next" class="h-5 w-5" />
               </button>
             </div>
@@ -92,10 +96,10 @@
           <img src="image-about-dark.jpg" alt="Dark furniture in a modern room" class="w-full h-full object-cover" />
         </figure>
 
-        <article class="lg:w-[40%] flex items-center justify-center py-12 lg:py-0">
+        <article class="lg:w-[40%] flex items-center justify-center py-12 lg:py-12">
           <div class="w-full max-w-md px-8">
             <h2 class="uppercase text-lg font-bold mb-4 tracking-widest">About our furniture</h2>
-            <p class="text-grey-500 leading-relaxed">
+            <p class="text-gray-600 leading-relaxed">
               Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme
               that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or
               anything in between. Product specialists are available to help you create your dream space.
@@ -114,8 +118,6 @@
         <div class="flex items-center justify-between">
           <button id="close-menu" aria-label="Close navigation menu">
             <img src="icon-close.svg" alt="Close menu" class="h-5 w-5" />
-
-            <div class="w-5"></div>
           </button>
           <nav class="flex space-x-6 text-md font-bold">
             <a href="#" class="hover:text-gray-500 transition-colors">home</a>
@@ -126,7 +128,6 @@
         </div>
       </div>
     </aside>
-
     <script src="./src/main.js"></script>
   </body>
 </html>
